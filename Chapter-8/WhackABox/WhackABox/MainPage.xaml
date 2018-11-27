@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WhackABox"
+             xmlns:controls="clr-namespace:WhackABox.Controls"
+             x:Class="WhackABox.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Padding="10">
+            <Label Text="Plane count" />
+            <Label Text="0" FontSize="Large" x:Name="planeCountLabel" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="0" Grid.Column="1" Padding="10">
+            <Label Text="Box count" />
+            <Label Text="0" FontSize="Large" x:Name="boxCountLabel" />
+        </StackLayout>
+
+        <controls:ARView Grid.Row="1" Grid.ColumnSpan="2" />
+    </Grid>
+
+</ContentPage>
