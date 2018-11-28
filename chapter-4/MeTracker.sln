@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker.Android", "..\MeTracker\MeTracker.Android\MeTracker.Android.csproj", "{9E7955A6-2366-48E6-9C42-5755F60E4AF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker.Android", "MeTracker\MeTracker.Android\MeTracker.Android.csproj", "{9E7955A6-2366-48E6-9C42-5755F60E4AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker.iOS", "..\MeTracker\MeTracker.iOS\MeTracker.iOS.csproj", "{DAB1BE29-1AC3-4200-B54F-253178277F4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker.iOS", "MeTracker\MeTracker.iOS\MeTracker.iOS.csproj", "{DAB1BE29-1AC3-4200-B54F-253178277F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker", "..\MeTracker\MeTracker\MeTracker.csproj", "{31419866-C616-42E9-AFE4-1DF5769E51BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeTracker", "MeTracker\MeTracker\MeTracker.csproj", "{31419866-C616-42E9-AFE4-1DF5769E51BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
