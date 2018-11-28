@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Weather.Controls" 
+             xmlns:behaviors="clr-namespace:Weather.Behaviors" 
+             x:Class="Weather.Views.MainView" Title="{Binding City}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="refresh.png" Text="Refresh" Command="{Binding Refresh}" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Image Aspect="AspectFill">
+            <Image.Source>
+                <UriImageSource Uri="https://upload.wikimedia.org/wikipedia/commons/7/79/Solnedg%C3%A5ng_%C3%B6ver_Laholmsbukten_augusti_2011.jpg" CachingEnabled="true" CacheValidity="1" />
+            </Image.Source>
+        </Image>
+        <ScrollView BackgroundColor="Transparent">
+            <controls:RepeaterView ItemsSource="{Binding Days}" Direction="Column">
+                <controls:RepeaterView.ItemsTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            
+                            
+                            <ContentView Padding="10" BackgroundColor="#9F5010">
+                                <Label Text="{Binding DateAsString}" TextColor="White" FontAttributes="Bold" />
+                            </ContentView>
+                            <controls:RepeaterView ItemsSource="{Binding Items}" Wrap="Wrap" JustifyContent="Start" AlignItems="Start">
+                                <controls:RepeaterView.Behaviors>
+                                    <behaviors:RepeaterViewBehavior />
+                                </controls:RepeaterView.Behaviors>
+                                <controls:RepeaterView.ItemsTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Margin="10" Padding="20" WidthRequest="150" BackgroundColor="#99FFFFFF">
+                                            <VisualStateManager.VisualStateGroups>
+                                                <VisualStateGroup>
+                                                    <VisualState Name="Portrait">
+                                                        <VisualState.Setters>
+                                                            <Setter Property="WidthRequest" Value="150" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                    <VisualState Name="Landscape">
+                                                        <VisualState.Setters>
+                                                            <Setter Property="WidthRequest" Value="200" />
+                                                        </VisualState.Setters>
+                                                    </VisualState>
+                                                </VisualStateGroup>
+                                            </VisualStateManager.VisualStateGroups>
+                                            <Label FontSize="16" FontAttributes="Bold" Text="{Binding TimeAsString}" HorizontalOptions="Center" />
+                                            <Image WidthRequest="100" HeightRequest="100" Aspect="AspectFit" HorizontalOptions="Center" Source="{Binding Icon}">
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup>
+                                                        <VisualState Name="Portrait">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="WidthRequest" Value="100" />
+                                                                <Setter Property="HeightRequest" Value="100" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                        <VisualState Name="Landscape">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="WidthRequest" Value="150" />
+                                                                <Setter Property="HeightRequest" Value="150" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                            </Image>
+                                            <Label FontSize="14" FontAttributes="Bold" Text="{Binding Temperature, StringFormat='{0}° C'}" HorizontalOptions="Center" />
+                                            <Label FontSize="14" FontAttributes="Bold" Text="{Binding Description}" HorizontalOptions="Center" />
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </controls:RepeaterView.ItemsTemplate>
+                            </controls:RepeaterView>
+                        </StackLayout>
+                    </DataTemplate>
+                </controls:RepeaterView.ItemsTemplate>
+            </controls:RepeaterView>
+        </ScrollView>
+        <Frame IsVisible="{Binding IsRefreshing}" BackgroundColor="#99FFFFFF" WidthRequest="100" HeightRequest="100" VerticalOptions="Center" HorizontalOptions="Center">
+            <ActivityIndicator Color="Black" IsRunning="True" />
+        </Frame>
+    </Grid>
+</ContentPage>

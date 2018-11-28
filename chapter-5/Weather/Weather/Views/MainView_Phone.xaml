@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather.Views.MainView_Phone" Title="{Binding City}">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Days}" IsGroupingEnabled="True" 
+                   HasUnevenRows="True" CachingStrategy="RecycleElement" 
+                   BackgroundColor="Transparent" IsPullToRefreshEnabled="True" 
+           RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsRefreshing}">
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView Padding="15,5" BackgroundColor="#9F5010">
+                            <Label FontAttributes="Bold" TextColor="White" Text="{Binding DateAsString}" VerticalOptions="Center" />
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="15,10" ColumnSpacing="10" BackgroundColor="#99FFFFFF">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label FontAttributes="Bold" Text="{Binding TimeAsString}" VerticalOptions="Center" />
+                            <Image Grid.Column="1" HeightRequest="50" WidthRequest="50" Source="{Binding Icon}" Aspect="AspectFit" VerticalOptions="Center" />
+                            <Label Grid.Column="2" Text="{Binding Temperature, StringFormat='{0}°  C'}" VerticalOptions="Center" />
+                            <Label Grid.Column="3" Text="{Binding Description}" VerticalOptions="Center" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
