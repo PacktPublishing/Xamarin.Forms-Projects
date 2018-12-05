@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
@@ -104,15 +103,13 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HotdogOrNot\HotdogOrNot.csproj">
-      <Project>{90759960-C355-42DF-BF86-A46AE71DDC0F}</Project>
+      <Project>{F8E8DBB6-838B-41D6-96FE-E9AB6BEDEBDF}</Project>
       <Name>HotdogOrNot</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\hotdog-or-not-labels.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\._hotdog-or-not-labels.txt" />
+    <AndroidAsset Include="Assets\hotdog-or-not-model.pb" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\xml\file_paths.xml" />
