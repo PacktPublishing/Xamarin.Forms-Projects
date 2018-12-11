@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Autofac;
-using Foundation;
+﻿using Autofac;
 using MeTracker.iOS.Services;
 using MeTracker.Services;
-using UIKit;
 
 namespace MeTracker.iOS
 {
