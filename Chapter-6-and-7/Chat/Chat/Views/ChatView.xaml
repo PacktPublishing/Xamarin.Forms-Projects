@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:selectors="clr-namespace:Chat.Selectors" 
+             xmlns:converters="clr-namespace:Chat.Converters" 
+             x:Class="Chat.Views.ChatView">
+    <ContentPage.Resources>
+        <selectors:ChatMessageSelector x:Key="SelectMessageTemplate" />
+        <converters:Base64ToImageConverter x:Key="ToImage" />
+    </ContentPage.Resources>
+    <ScrollView>
+        <Grid x:Name="MainGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1" />
+                <RowDefinition>
+                    <RowDefinition.Height>
+                        <OnPlatform x:TypeArguments="GridLength">
+                            <On Platform="iOS" Value="50" />
+                            <On Platform="Android" Value="100" />
+                        </OnPlatform>
+                    </RowDefinition.Height>
+                </RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ListView x:Name="MessageList" ItemsSource="{Binding Messages}" 
+          ItemTemplate="{StaticResource SelectMessageTemplate}" 
+          HasUnevenRows="true" SeparatorVisibility="None">
+                <ListView.Resources>
+                    <ResourceDictionary>
+                        <DataTemplate x:Key="SimpleText">
+                            <ViewCell IsEnabled="false">
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Frame StyleClass="remoteMessage" HasShadow="false">
+                                        <StackLayout>
+                                            <Label Text="{Binding Username}" StyleClass="chatHeader" />
+                                            <Label Text="{Binding Text}" StyleClass="chatText" />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+
+                        <DataTemplate x:Key="LocalSimpleText">
+                            <ViewCell IsEnabled="false">
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Frame Grid.Column="1" StyleClass="localMessage" HasShadow="false">
+                                        <StackLayout>
+                                            <Label Text="{Binding Username}" StyleClass="chatHeader" />
+                                            <Label Text="{Binding Text}" StyleClass="chatText" />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+
+                        <DataTemplate x:Key="UserConnected">
+                            <ViewCell IsEnabled="false">
+                                <StackLayout Padding="10" BackgroundColor="#33000000" Orientation="Horizontal">
+                                    <Label Text="{Binding Username}" StyleClass="chatHeader" VerticalOptions="Center" />
+                                    <Label Text="connected" StyleClass="chatText" VerticalOptions="Center" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+
+                        <DataTemplate x:Key="Photo">
+                            <ViewCell IsEnabled="false">
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout>
+                                        <Label Text="{Binding Username}" StyleClass="chatHeader" />
+                                        <Image Source="{Binding Url}" Aspect="AspectFill" 
+                       HeightRequest="150" HorizontalOptions="Fill" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+
+                        <DataTemplate x:Key="LocalPhoto">
+                            <ViewCell IsEnabled="false">
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="{Binding Username}" StyleClass="chatHeader" />
+                                        <Image Source="{Binding Base64Photo, Converter={StaticResource ToImage}}" 
+                       Aspect="AspectFill" HeightRequest="150" HorizontalOptions="Fill" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ResourceDictionary>
+                </ListView.Resources>
+            </ListView>
+
+            <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="#33000000" />
+            <Grid Grid.Row="2" Padding="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="30" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="photo.png" Command="{Binding Photo}"
+             VerticalOptions="Center" HorizontalOptions="Center" />
+                <Entry Text="{Binding Text}" Grid.Column="1" 
+       ReturnCommand="{Binding Send}" />
+                <ImageButton Grid.Column="2" Source="send.png" 
+             Command="{Binding Send}" 
+             VerticalOptions="Center" HorizontalOptions="Center" />
+
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage> 

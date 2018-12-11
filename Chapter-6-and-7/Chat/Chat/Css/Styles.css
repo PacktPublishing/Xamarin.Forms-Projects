@@ -1,0 +1,25 @@
+﻿button {
+    background-color: #A4243B;
+    color: white;
+}
+
+.chatHeader {
+    color: white;
+    font-style: bold;
+    font-size: small;
+}
+
+.chatText {
+    color: white;
+    font-size: small;
+}
+
+.remoteMessage {
+    background-color: #F04D6A;
+    padding: 10;
+}
+
+.localMessage {
+    background-color: #24A43B;
+    padding: 10;
+}
