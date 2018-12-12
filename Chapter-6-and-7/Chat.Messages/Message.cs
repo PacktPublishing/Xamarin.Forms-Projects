@@ -12,6 +12,7 @@ namespace Chat.Messages
         public Message() { }
         public Message(string username)
         {
+            Id = Guid.NewGuid().ToString();
             TypeInfo = GetType();
             Username = username;
             Timestamp = DateTime.Now;
