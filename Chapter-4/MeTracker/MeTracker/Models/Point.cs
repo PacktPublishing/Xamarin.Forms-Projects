@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MeTracker.Models
+﻿namespace MeTracker.Models
 {
     public class Point
     {
