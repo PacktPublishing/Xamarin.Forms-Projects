@@ -43,9 +43,7 @@ With the following software and hardware list you can run all code files present
 
 | Chapter  | OS required                   | Hardware required                        |
 | -------- | ------------------------------| -----------------------------------  |
-| 1-9      | Windows 10 or later, macOS    |A computer capable of running Windows 
-                                             10 or later for UWP and Android.
-           |  Sierra 10.12 or later        |        
+| 1-9      | Windows 10 or later, macOS    |A computer capable of running Windows 10 or later for UWP and Android                                  |  Sierra 10.12 or later        |        
 
                     | A computer capable of running Windows 10 or later for UWP and Android.
 
