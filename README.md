@@ -60,11 +60,11 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Get to Know the Author(s)
 *Johan Karlsson*
-Johan has been working with Xamarin since the days of MonoTouch and Mono for Android and it all started with writing a game. He is a full-stack developer, currently focusing on Mobile Applications using Xamarin. But has in the passed worked a lot with ASP.NET MVC, Visual Basic.NET and C# in general. Also, a whole bunch of databases in SQL Server has been created over the years.
+ has been working with Xamarin since the days of MonoTouch and Mono for Android and it all started with writing a game. He is a full-stack developer, currently focusing on Mobile Applications using Xamarin. But has in the passed worked a lot with ASP.NET MVC, Visual Basic.NET and C# in general. Also, a whole bunch of databases in SQL Server has been created over the years.
 Johan works at tretton37 in Sweden and has about 20 years' experience in the trade of assembling ones and zeros.
 
 *Daniel Hindrikes*
-Daniel is a developer and architect that has his passion for developing mobile apps powered by the cloud. Daniel fell in love with Xamarin in the early days of Xamarin when he realized that he could use C# even for iOS- and Android apps and that he could share code with the Windows apps he also was building. But Daniel started to build mobile apps long before that, Android apps with Java and even Java ME apps (a long, long time ago).
+ is a developer and architect that has his passion for developing mobile apps powered by the cloud. Daniel fell in love with Xamarin in the early days of Xamarin when he realized that he could use C# even for iOS- and Android apps and that he could share code with the Windows apps he also was building. But Daniel started to build mobile apps long before that, Android apps with Java and even Java ME apps (a long, long time ago).
 Daniel enjoying sharing his knowledge, for example by speaking at conferences, blogging or recording the podcast, The Code Behind.
 Daniel working at the company tretton37 in Sweden and he has experience for working with both local- and global customers.
 
