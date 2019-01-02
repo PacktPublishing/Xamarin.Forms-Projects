@@ -58,7 +58,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * React and React Native - Second Edition [[Packt]](https://www.packtpub.com/application-development/react-and-react-native-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781789346794) [[Amazon]](https://www.amazon.com/dp/1789346797)
 
-## Get to Know the Author(s)
+## Get to Know the Authors
 *Johan Karlsson*
  has been working with Xamarin since the days of MonoTouch and Mono for Android and it all started with writing a game. He is a full-stack developer, currently focusing on Mobile Applications using Xamarin. But has in the passed worked a lot with ASP.NET MVC, Visual Basic.NET and C# in general. Also, a whole bunch of databases in SQL Server has been created over the years.
 Johan works at tretton37 in Sweden and has about 20 years' experience in the trade of assembling ones and zeros.
