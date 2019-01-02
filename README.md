@@ -44,7 +44,7 @@ With the following software and hardware list you can run all code files present
 | Chapter  | OS required                                     | Software/Hardware required                        |
 | -------- | ------------------------------                  | -----------------------------------      |
 | 1-9      | Windows 10 or later, macOS Sierra 10.12 or later|Visual Studio Community Edition. A computer capable of running Windows 10 or later for UWP and Android. A mac that is capable of running macOS Sierra 10.12 to develop for iOS      
-
+| 1-9      |macOS Sierra 10.12                               |Xcode. A mac that is capable of running macOS Sierra 10.12 
                   
 
 
