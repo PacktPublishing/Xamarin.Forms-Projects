@@ -38,9 +38,9 @@
 	<array>
 		<string>location</string>
 	</array>
-  <key>NSLocationWhenInUseUsageDescription</key>
-  <string>We will use your location to track you</string>
-  <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-  <string>We will use your location to track you</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We will use your location to track you</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We will use your location to track you</string>
 </dict>
 </plist>
