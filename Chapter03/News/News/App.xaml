@@ -2,13 +2,5 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
     x:Class="News.App">
     <Application.Resources>
-        <ResourceDictionary>
-          
-                <OnPlatform x:Key="IconFont" x:TypeArguments="x:String">
-                    <On Platform="iOS" Value="Font Awesome 5 Free" />
-                    <On Platform="Android" Value="FontAwesome.otf#" />
-                </OnPlatform>
-          
-        </ResourceDictionary>
     </Application.Resources>
 </Application>
