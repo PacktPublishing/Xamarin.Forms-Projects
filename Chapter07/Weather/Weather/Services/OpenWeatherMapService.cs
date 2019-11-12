@@ -14,7 +14,7 @@ namespace Weather.Services
         public async Task<Forecast> GetForecast(double latitude, double longitude)
         {
             var language = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-            var apiKey = "{YourApiKey}";
+            var apiKey = "479e91e9bf6de57271130e0477c16929";
             var uri = $"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&units=metric&lang={language}&appid={apiKey}";
 
             var httpClient = new HttpClient();
