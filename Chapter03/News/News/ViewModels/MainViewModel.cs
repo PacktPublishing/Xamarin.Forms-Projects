@@ -1,7 +1,7 @@
 ﻿using System;
 namespace News.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel : ViewModel
     {
         public MainViewModel()
         {

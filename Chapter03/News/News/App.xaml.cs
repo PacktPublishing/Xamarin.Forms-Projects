@@ -10,7 +10,9 @@ namespace News
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            Bootstrapper.Initialize();
+
+            MainPage = Resolver.Resolve<MainShell>();
         }
 
         protected override void OnStart()

@@ -1,10 +1,22 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
+using Autofac;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+
 namespace News
 {
-    public class Resolver
+    public static class Resolver
     {
-        public Resolver()
+        private static IContainer container;
+
+        public static void Initialize(IContainer container)
         {
+            Resolver.container = container;
+        }
+
+        public static T Resolve<T>()
+        {
+            return container.Resolve<T>();
         }
     }
 }
